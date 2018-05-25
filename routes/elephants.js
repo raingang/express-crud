@@ -37,7 +37,7 @@ router.post('/', (req, res, next) => {
 		};
 
 		store.push(elephant);
-		res.status = 200;
+		res.status = 201;
 		res.send(elephant);
 	} else {
 		let err = new Error('Bad Request');
@@ -65,6 +65,7 @@ router.put('/:id', (req, res, next) => {
 
 	elephant = {...elephant, ...req.body};
 	store.splice(index, 1, elephant);
+	res.status = 200;
 	res.send(elephant);
 });
 
@@ -79,6 +80,7 @@ router.delete('/:id', (req, res, next) => {
 	}
 
 	store.splice(index);
+	res.status = 200;
 	res.send({});
 });
 
