@@ -22,5 +22,4 @@ module.exports = [
 		weight: '5500',
 		height: '3.5',
 	}
-
-]
+];
