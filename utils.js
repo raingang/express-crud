@@ -14,4 +14,5 @@ const getIndexOfElement = (id, arr) => {
 module.exports = {
 	getElementById,
 	getNewId,
+	getIndexOfElement,
 }
